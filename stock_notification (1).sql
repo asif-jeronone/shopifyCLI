@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 07, 2023 at 05:38 AM
+-- Generation Time: Jun 07, 2023 at 05:51 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -159,14 +159,6 @@ CREATE TABLE `sessions` (
   `collaborator` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `sessions`
---
-
-INSERT INTO `sessions` (`id`, `session_id`, `shop`, `is_online`, `state`, `created_at`, `updated_at`, `scope`, `access_token`, `expires_at`, `user_id`, `user_first_name`, `user_last_name`, `user_email`, `user_email_verified`, `account_owner`, `locale`, `collaborator`) VALUES
-(2, 'offline_jptl-myapp.myshopify.com', 'jptl-myapp.myshopify.com', 0, 'f6ef1f62-8e81-4f65-a772-2fe92ba832cf', '2023-06-01 01:01:29', '2023-06-01 01:01:31', 'write_content,write_products,write_customers,write_script_tags', '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', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'offline_jeronone-app.myshopify.com', 'jeronone-app.myshopify.com', 0, '20cd7e82-22a1-4788-86f7-1735eb63e9f6', '2023-06-01 23:38:08', '2023-06-01 23:38:18', 'write_content,write_products,write_customers,write_script_tags', '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', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -183,13 +175,6 @@ CREATE TABLE `shop_details` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `shop_details`
---
-
-INSERT INTO `shop_details` (`id`, `shop_id`, `name`, `email`, `domain`, `sub_domain`, `created_at`, `updated_at`) VALUES
-(1, '75717280043', 'jeronone-app', 'asif@jeronone.com', 'jeronone-app.myshopify.com', 'jeronone-app.myshopify.com', '2023-05-20 07:04:14', '2023-05-20 07:04:14');
 
 -- --------------------------------------------------------
 
@@ -319,13 +304,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `sessions`
 --
 ALTER TABLE `sessions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `shop_details`
 --
 ALTER TABLE `shop_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `shop_syncs`
