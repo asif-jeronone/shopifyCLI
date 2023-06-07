@@ -1,0 +1,31 @@
+<div class="jtpl-product-list">
+  {% if customer %}
+    <div class="page-title">
+      <h2>{{block.settings.title}}</h2>
+    </div>
+  {% else %}
+   <h2>Please login first</h2>
+  {% endif %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Wishlist Page",
+  "target": "section",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    { 
+      "type": "text", 
+      "id": "title", 
+      "label": "Page Title",
+      "default":"Wishlist"
+    }  
+  ],
+  "stylesheet":"jtplwishlistproduct.css",
+  "javascript":"jtplwishlistproduct.js"
+}
+{% endschema %}
+

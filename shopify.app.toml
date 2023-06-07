@@ -1,0 +1,4 @@
+# This file stores configurations for your Shopify app.
+
+name = "Notify Customer"
+scopes = "read_content,write_content,write_products,read_products,read_customers,write_customers,read_script_tags,write_script_tags"
