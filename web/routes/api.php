@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EmailSettingController;
 use App\Http\Controllers\Admin\WishlistController;
 use App\Http\Controllers\Admin\ShopifyController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::middleware('shopify.auth')->controller(EmailSettingController::class)->gr
     Route::post('/email/product-update', 'productUpdate');
     Route::post('/product-create', 'productCreate');
     Route::get('/email/product-get', 'productGet');
+});
+
+Route::middleware('shopify.auth')->controller(ProductController::class)->group(function(){
+    Route::get('/product/list', 'index');
 });
 
 Route::middleware('shopify.auth')->controller(ShopifyController::class)->group(function(){

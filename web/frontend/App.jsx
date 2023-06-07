@@ -32,6 +32,10 @@ export default function App() {
                   label: "Page name",
                   destination: "/pagename",
                 },
+                {
+                  label: "Product",
+                  destination: "/product/ProductList",
+                },
               ]}
             />
             <Routes pages={pages} />
